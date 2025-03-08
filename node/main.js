@@ -3,8 +3,14 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  console.log(`IP: ${req.ip}`);
+  console.log(`OG: ${req.ip}`);
   res.send(`Hello World!\n Req: ${req.ips}\nIP: ${req.ip}\n`);
+
+});
+
+app.get('/ip', (req, res) => {
+  console.log(`IP: ${req.ip}`);
+  res.send(`IP: ${req.ip}\n`);
 
 })
 
